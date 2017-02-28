@@ -1,0 +1,14 @@
+server:
+  adminConnectors:
+  - type: http
+    port: 8081
+  applicationConnectors:
+  - type: http
+    port: 8080
+logging:
+  level: INFO
+  loggers:
+    com.newcontext.data: TRACE
+  appenders:
+  - type: console
+    logFormat: '[%d{HH:mm:ss.SSS}][%-5level][%logger{5}][%mdc]: %msg%n'

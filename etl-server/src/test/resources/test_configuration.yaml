@@ -1,0 +1,19 @@
+server:
+  adminConnectors:
+  - type: http
+    port: 9091
+  applicationConnectors:
+  - type: http
+    port: 9090
+logging:
+  level: INFO
+  loggers:
+    com.newcontext.etl: TRACE
+  appenders:
+  - type: console
+    logFormat: '[%d{HH:mm:ss.SSS}][%-5level][%logger{5}][%mdc]: %msg%n'
+dataSourceURL: jdbc:mysql://localhost:3306/pets
+dataSourceUser: root
+dataSourcePassword: secret_squirrel
+uploadTarget: http://localhost:8080
+catFavoritePlace: couch
